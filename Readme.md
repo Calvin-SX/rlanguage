@@ -110,6 +110,27 @@ if (a > b) {
 } else if (a > c) {
 
 } else {
-    
+
 }
 ```
+
+## while and for loop
+Use `next` for `continue`
+
+For loop goes like
+```r
+for (i in 1:10){
+
+}
+```
+
+## function
+_NOTE_: the function syntax is little bit strange
+```r
+function_name <- function(param) {
+
+}
+
+function_name(a) # call the above function like this
+```
+See [firstScript.R](./firstScript.R) for example.
