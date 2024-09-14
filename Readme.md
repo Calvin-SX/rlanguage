@@ -33,11 +33,83 @@ a <- b <- c <- 10
 ### Basic types
 * numeric
 * integer
-* complex. Interesting, r support complex number computation (+, -, *, /)
+* complex. Interesting, r support complex number computation (+, -, *, /). Tricky part here `10+i` means 10 plus a variable `i`. It is different from `10+1i`, which is a complex number.
 * character and string
 * logical
 
 Use 
 ```r
 class(var) # show the type of variable var
+```
+
+### data type conversion
+Use
+```r
+as.integer
+as.complex
+as.integer
+```
+to do conversion into data type.
+
+## Math
+
+### basic built-in functions
+* `max` and `min`
+* `sqrt`
+* `abs`
+* `ceiling` and `floor`
+
+## Strings
+String can be  nultiline. A "\n" is used to replace the line break.
+```r
+str <- "First line
+second line
+third line"
+```
+Use `cat(str)` to show exactly what being input
+
+### string length
+Use 
+```r
+len = nchar(str)
+```
+It supports unicode. The function above gives correct count even for unicode string like Chinese.
+
+Use 
+```r
+grepl(substr, str)
+```
+to check if str contains substr.
+
+Use `paste` to merge strings.
+
+### escape char
+Use "\" for escape char. 
+
+## Booleans
+Boolean operations: ">", "<", "==", "!=", ">=",  "<=", "&&", "||", "!".
+
+## Other operators
+* +
+* -
+* *
+* /
+* ^ for power
+* %% modulus
+* %/% integer devision
+
+## Misc operators
+* ":" creates a series of numbers in a sequence: `x <- 1:10`
+* "%in%" find out if an element in a vector: `x %in% y`
+* %*% matrix multiplication, same as dot product?
+
+## If statement
+```r
+if (a > b) {
+
+} else if (a > c) {
+
+} else {
+    
+}
 ```
